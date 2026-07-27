@@ -1,0 +1,812 @@
+[
+  {
+    "exact": true,
+    "first_token": true,
+    "n_answer_tokens": 1,
+    "generated": " Portuguese",
+    "name": "amazon-language",
+    "category": "multihop",
+    "answer": "Portuguese"
+  },
+  {
+    "exact": true,
+    "first_token": true,
+    "n_answer_tokens": 1,
+    "generated": " shell",
+    "name": "animal-cover-turtle",
+    "category": "animal-cover",
+    "answer": "shell"
+  },
+  {
+    "exact": false,
+    "first_token": false,
+    "n_answer_tokens": 1,
+    "generated": " ",
+    "name": "animal-legs-buffalo2",
+    "category": "animal-legs",
+    "answer": "four"
+  },
+  {
+    "exact": true,
+    "first_token": true,
+    "n_answer_tokens": 1,
+    "generated": " trunk",
+    "name": "animal-nose-elephant",
+    "category": "animal-nose",
+    "answer": "trunk"
+  },
+  {
+    "exact": false,
+    "first_token": false,
+    "n_answer_tokens": 1,
+    "generated": " a",
+    "name": "atomic-80-state",
+    "category": "multihop",
+    "answer": "liquid"
+  },
+  {
+    "exact": false,
+    "first_token": true,
+    "n_answer_tokens": 2,
+    "generated": " 1",
+    "name": "basketball-players",
+    "category": "multihop",
+    "answer": "5"
+  },
+  {
+    "exact": false,
+    "first_token": false,
+    "n_answer_tokens": 1,
+    "generated": " same",
+    "name": "beverage-source-wine",
+    "category": "beverage-source",
+    "answer": "grape"
+  },
+  {
+    "exact": true,
+    "first_token": true,
+    "n_answer_tokens": 1,
+    "generated": " white",
+    "name": "bird-color-swan",
+    "category": "bird-color",
+    "answer": "white"
+  },
+  {
+    "exact": false,
+    "first_token": false,
+    "n_answer_tokens": 1,
+    "generated": " the",
+    "name": "bird-country-eagle",
+    "category": "bird-country",
+    "answer": "America"
+  },
+  {
+    "exact": false,
+    "first_token": false,
+    "n_answer_tokens": 1,
+    "generated": " the",
+    "name": "bird-time-owl",
+    "category": "bird-time",
+    "answer": "night"
+  },
+  {
+    "exact": true,
+    "first_token": true,
+    "n_answer_tokens": 2,
+    "generated": " 5",
+    "name": "birthstone-emerald-month",
+    "category": "multihop",
+    "answer": "5"
+  },
+  {
+    "exact": false,
+    "first_token": true,
+    "n_answer_tokens": 2,
+    "generated": " 1",
+    "name": "chem-atmosphere-Z",
+    "category": "multihop",
+    "answer": "7"
+  },
+  {
+    "exact": false,
+    "first_token": true,
+    "n_answer_tokens": 3,
+    "generated": " 26",
+    "name": "chem-bones-Z",
+    "category": "multihop",
+    "answer": "20"
+  },
+  {
+    "exact": true,
+    "first_token": true,
+    "n_answer_tokens": 2,
+    "generated": " 6",
+    "name": "chem-organic-Z",
+    "category": "multihop",
+    "answer": "6"
+  },
+  {
+    "exact": false,
+    "first_token": true,
+    "n_answer_tokens": 2,
+    "generated": " 6",
+    "name": "chem-photosynthesis-Z",
+    "category": "multihop",
+    "answer": "8"
+  },
+  {
+    "exact": false,
+    "first_token": false,
+    "n_answer_tokens": 1,
+    "generated": " the",
+    "name": "christmas-season",
+    "category": "multihop",
+    "answer": "winter"
+  },
+  {
+    "exact": false,
+    "first_token": false,
+    "n_answer_tokens": 1,
+    "generated": " the",
+    "name": "city-state-Philadelphia",
+    "category": "city-state",
+    "answer": "Pennsylvania"
+  },
+  {
+    "exact": true,
+    "first_token": true,
+    "n_answer_tokens": 1,
+    "generated": " Euro",
+    "name": "colosseum-currency",
+    "category": "multihop",
+    "answer": "Euro"
+  },
+  {
+    "exact": false,
+    "first_token": false,
+    "n_answer_tokens": 1,
+    "generated": " gold",
+    "name": "element-color-gold2",
+    "category": "element-color",
+    "answer": "yellow"
+  },
+  {
+    "exact": true,
+    "first_token": true,
+    "n_answer_tokens": 2,
+    "generated": " 5",
+    "name": "etym-frigg-position",
+    "category": "multihop",
+    "answer": "5"
+  },
+  {
+    "exact": false,
+    "first_token": true,
+    "n_answer_tokens": 2,
+    "generated": " 4",
+    "name": "etym-saturn-position",
+    "category": "multihop",
+    "answer": "6"
+  },
+  {
+    "exact": true,
+    "first_token": true,
+    "n_answer_tokens": 2,
+    "generated": " 3",
+    "name": "etym-wargod-month",
+    "category": "multihop",
+    "answer": "3"
+  },
+  {
+    "exact": true,
+    "first_token": true,
+    "n_answer_tokens": 1,
+    "generated": " Madrid",
+    "name": "ex-city-capital-Barcelona-Toronto",
+    "category": "city-capital",
+    "answer": "Madrid"
+  },
+  {
+    "exact": true,
+    "first_token": true,
+    "n_answer_tokens": 1,
+    "generated": " Paris",
+    "name": "ex-city-capital-Lyon-Naples",
+    "category": "city-capital",
+    "answer": "Paris"
+  },
+  {
+    "exact": true,
+    "first_token": true,
+    "n_answer_tokens": 1,
+    "generated": " Rome",
+    "name": "ex-city-capital-Naples-Barcelona",
+    "category": "city-capital",
+    "answer": "Rome"
+  },
+  {
+    "exact": true,
+    "first_token": true,
+    "n_answer_tokens": 1,
+    "generated": " Ottawa",
+    "name": "ex-city-capital-Toronto-Lyon",
+    "category": "city-capital",
+    "answer": "Ottawa"
+  },
+  {
+    "exact": true,
+    "first_token": true,
+    "n_answer_tokens": 1,
+    "generated": " North",
+    "name": "ex-city-continent-Toronto-Lyon",
+    "category": "city-continent",
+    "answer": "North"
+  },
+  {
+    "exact": true,
+    "first_token": true,
+    "n_answer_tokens": 1,
+    "generated": " Canadian",
+    "name": "ex-city-currency-Toronto-Beijing",
+    "category": "city-currency",
+    "answer": "Canadian"
+  },
+  {
+    "exact": true,
+    "first_token": true,
+    "n_answer_tokens": 1,
+    "generated": " Canadian",
+    "name": "ex-city-currency-Toronto-Mumbai",
+    "category": "city-currency",
+    "answer": "Canadian"
+  },
+  {
+    "exact": true,
+    "first_token": true,
+    "n_answer_tokens": 1,
+    "generated": " French",
+    "name": "ex-city-language-Lyon-Naples",
+    "category": "city-language",
+    "answer": "French"
+  },
+  {
+    "exact": true,
+    "first_token": true,
+    "n_answer_tokens": 1,
+    "generated": " solid",
+    "name": "ex-element-state-26-8",
+    "category": "element-state",
+    "answer": "solid"
+  },
+  {
+    "exact": true,
+    "first_token": true,
+    "n_answer_tokens": 1,
+    "generated": " solid",
+    "name": "ex-element-state-26-80",
+    "category": "element-state",
+    "answer": "solid"
+  },
+  {
+    "exact": false,
+    "first_token": false,
+    "n_answer_tokens": 1,
+    "generated": " a",
+    "name": "ex-element-state-8-26",
+    "category": "element-state",
+    "answer": "gas"
+  },
+  {
+    "exact": false,
+    "first_token": false,
+    "n_answer_tokens": 1,
+    "generated": " a",
+    "name": "ex-element-state-8-80",
+    "category": "element-state",
+    "answer": "gas"
+  },
+  {
+    "exact": false,
+    "first_token": false,
+    "n_answer_tokens": 1,
+    "generated": " a",
+    "name": "ex-element-state-80-8",
+    "category": "element-state",
+    "answer": "liquid"
+  },
+  {
+    "exact": true,
+    "first_token": true,
+    "n_answer_tokens": 1,
+    "generated": " Na",
+    "name": "ex-element-symbol-11-26",
+    "category": "element-symbol",
+    "answer": "Na"
+  },
+  {
+    "exact": true,
+    "first_token": true,
+    "n_answer_tokens": 1,
+    "generated": " Fe",
+    "name": "ex-element-symbol-26-79",
+    "category": "element-symbol",
+    "answer": "Fe"
+  },
+  {
+    "exact": true,
+    "first_token": true,
+    "n_answer_tokens": 1,
+    "generated": " blue",
+    "name": "ex-planet-color-third-fourth",
+    "category": "planet-color",
+    "answer": "blue"
+  },
+  {
+    "exact": true,
+    "first_token": true,
+    "n_answer_tokens": 1,
+    "generated": " Berlin",
+    "name": "ex2-city-capital-Munich",
+    "category": "city-capital",
+    "answer": "Berlin"
+  },
+  {
+    "exact": true,
+    "first_token": true,
+    "n_answer_tokens": 1,
+    "generated": " Tokyo",
+    "name": "ex2-city-capital-Osaka",
+    "category": "city-capital",
+    "answer": "Tokyo"
+  },
+  {
+    "exact": true,
+    "first_token": true,
+    "n_answer_tokens": 1,
+    "generated": " South",
+    "name": "ex2-city-continent-Lima",
+    "category": "city-continent",
+    "answer": "South"
+  },
+  {
+    "exact": true,
+    "first_token": true,
+    "n_answer_tokens": 1,
+    "generated": " Australia",
+    "name": "ex2-city-continent-Sydney",
+    "category": "city-continent",
+    "answer": "Australia"
+  },
+  {
+    "exact": true,
+    "first_token": true,
+    "n_answer_tokens": 1,
+    "generated": " Arabic",
+    "name": "ex2-city-language-Cairo",
+    "category": "city-language",
+    "answer": "Arabic"
+  },
+  {
+    "exact": true,
+    "first_token": true,
+    "n_answer_tokens": 1,
+    "generated": " Russian",
+    "name": "ex2-city-language-Moscow",
+    "category": "city-language",
+    "answer": "Russian"
+  },
+  {
+    "exact": true,
+    "first_token": true,
+    "n_answer_tokens": 1,
+    "generated": " Athens",
+    "name": "ex2-language-capital-Greek",
+    "category": "language-capital",
+    "answer": "Athens"
+  },
+  {
+    "exact": true,
+    "first_token": true,
+    "n_answer_tokens": 1,
+    "generated": " Budapest",
+    "name": "ex2-language-capital-Hungarian",
+    "category": "language-capital",
+    "answer": "Budapest"
+  },
+  {
+    "exact": true,
+    "first_token": true,
+    "n_answer_tokens": 1,
+    "generated": " Warsaw",
+    "name": "ex2-language-capital-Polish",
+    "category": "language-capital",
+    "answer": "Warsaw"
+  },
+  {
+    "exact": true,
+    "first_token": true,
+    "n_answer_tokens": 1,
+    "generated": " Stockholm",
+    "name": "ex2-language-capital-Swedish",
+    "category": "language-capital",
+    "answer": "Stockholm"
+  },
+  {
+    "exact": true,
+    "first_token": true,
+    "n_answer_tokens": 1,
+    "generated": " London",
+    "name": "ex2-river-capital-Thames",
+    "category": "river-capital",
+    "answer": "London"
+  },
+  {
+    "exact": true,
+    "first_token": true,
+    "n_answer_tokens": 1,
+    "generated": " cow",
+    "name": "food-animal-butter",
+    "category": "food-animal",
+    "answer": "cow"
+  },
+  {
+    "exact": false,
+    "first_token": false,
+    "n_answer_tokens": 1,
+    "generated": " honey",
+    "name": "food-animal-honey",
+    "category": "food-animal",
+    "answer": "bee"
+  },
+  {
+    "exact": true,
+    "first_token": true,
+    "n_answer_tokens": 1,
+    "generated": " vine",
+    "name": "fruit-grows-grape",
+    "category": "fruit-grows",
+    "answer": "vine"
+  },
+  {
+    "exact": true,
+    "first_token": true,
+    "n_answer_tokens": 2,
+    "generated": " 2",
+    "name": "func-filters-count",
+    "category": "multihop",
+    "answer": "2"
+  },
+  {
+    "exact": true,
+    "first_token": true,
+    "n_answer_tokens": 2,
+    "generated": " 4",
+    "name": "func-pumps-chambers",
+    "category": "multihop",
+    "answer": "4"
+  },
+  {
+    "exact": true,
+    "first_token": true,
+    "n_answer_tokens": 1,
+    "generated": " red",
+    "name": "gem-color-ruby",
+    "category": "gem-color",
+    "answer": "red"
+  },
+  {
+    "exact": false,
+    "first_token": false,
+    "n_answer_tokens": 2,
+    "generated": " pearl o",
+    "name": "gem-source-pearl",
+    "category": "gem-source",
+    "answer": "oyster"
+  },
+  {
+    "exact": true,
+    "first_token": true,
+    "n_answer_tokens": 1,
+    "generated": " Pacific",
+    "name": "greatwall-ocean",
+    "category": "multihop",
+    "answer": "Pacific"
+  },
+  {
+    "exact": true,
+    "first_token": true,
+    "n_answer_tokens": 1,
+    "generated": " December",
+    "name": "holiday-month-christmas2",
+    "category": "holiday-month",
+    "answer": "December"
+  },
+  {
+    "exact": true,
+    "first_token": true,
+    "n_answer_tokens": 1,
+    "generated": " lips",
+    "name": "instr-body-trumpet",
+    "category": "instr-played",
+    "answer": "lips"
+  },
+  {
+    "exact": false,
+    "first_token": false,
+    "n_answer_tokens": 1,
+    "generated": " a",
+    "name": "instr-hit-drums",
+    "category": "instr-played",
+    "answer": "sticks"
+  },
+  {
+    "exact": false,
+    "first_token": false,
+    "n_answer_tokens": 1,
+    "generated": " blue",
+    "name": "mars-color",
+    "category": "multihop",
+    "answer": "red"
+  },
+  {
+    "exact": true,
+    "first_token": true,
+    "n_answer_tokens": 1,
+    "generated": " war",
+    "name": "month-3-godof",
+    "category": "multihop",
+    "answer": "war"
+  },
+  {
+    "exact": false,
+    "first_token": false,
+    "n_answer_tokens": 1,
+    "generated": " stomach",
+    "name": "organ-acid-stomach",
+    "category": "organ-function",
+    "answer": "acid"
+  },
+  {
+    "exact": false,
+    "first_token": false,
+    "n_answer_tokens": 1,
+    "generated": " ",
+    "name": "organ-count-kidney2",
+    "category": "organ-count",
+    "answer": "two"
+  },
+  {
+    "exact": true,
+    "first_token": true,
+    "n_answer_tokens": 1,
+    "generated": " skull",
+    "name": "organ-location-brain",
+    "category": "organ-location",
+    "answer": "skull"
+  },
+  {
+    "exact": false,
+    "first_token": false,
+    "n_answer_tokens": 1,
+    "generated": " heart",
+    "name": "organ-location-heart",
+    "category": "organ-location",
+    "answer": "chest"
+  },
+  {
+    "exact": false,
+    "first_token": false,
+    "n_answer_tokens": 3,
+    "generated": " bear.\n",
+    "name": "osu-rival-mascot",
+    "category": "multihop",
+    "answer": "wolverine"
+  },
+  {
+    "exact": true,
+    "first_token": true,
+    "n_answer_tokens": 1,
+    "generated": " Asia",
+    "name": "paper-continent",
+    "category": "multihop",
+    "answer": "Asia"
+  },
+  {
+    "exact": true,
+    "first_token": true,
+    "n_answer_tokens": 1,
+    "generated": " Civil",
+    "name": "person-century-lincoln",
+    "category": "person-century",
+    "answer": "Civil"
+  },
+  {
+    "exact": true,
+    "first_token": true,
+    "n_answer_tokens": 1,
+    "generated": " France",
+    "name": "person-country-napoleon",
+    "category": "person-country",
+    "answer": "France"
+  },
+  {
+    "exact": false,
+    "first_token": false,
+    "n_answer_tokens": 1,
+    "generated": " the",
+    "name": "person-country-shakespeare",
+    "category": "person-country",
+    "answer": "England"
+  },
+  {
+    "exact": true,
+    "first_token": true,
+    "n_answer_tokens": 1,
+    "generated": " Charles",
+    "name": "person-firstname-darwin",
+    "category": "person-firstname",
+    "answer": "Charles"
+  },
+  {
+    "exact": true,
+    "first_token": true,
+    "n_answer_tokens": 1,
+    "generated": " Albert",
+    "name": "person-firstname-einstein",
+    "category": "person-firstname",
+    "answer": "Albert"
+  },
+  {
+    "exact": false,
+    "first_token": false,
+    "n_answer_tokens": 1,
+    "generated": " Mozart",
+    "name": "person-firstname-mozart",
+    "category": "person-firstname",
+    "answer": "Wolfgang"
+  },
+  {
+    "exact": true,
+    "first_token": true,
+    "n_answer_tokens": 1,
+    "generated": " Isaac",
+    "name": "person-firstname-newton",
+    "category": "person-firstname",
+    "answer": "Isaac"
+  },
+  {
+    "exact": true,
+    "first_token": true,
+    "n_answer_tokens": 1,
+    "generated": " William",
+    "name": "person-firstname-shakespeare",
+    "category": "person-firstname",
+    "answer": "William"
+  },
+  {
+    "exact": false,
+    "first_token": true,
+    "n_answer_tokens": 2,
+    "generated": " 2",
+    "name": "planet-3-moons",
+    "category": "multihop",
+    "answer": "1"
+  },
+  {
+    "exact": true,
+    "first_token": true,
+    "n_answer_tokens": 1,
+    "generated": " rings",
+    "name": "planet-rings-saturn2",
+    "category": "planet-feature",
+    "answer": "rings"
+  },
+  {
+    "exact": true,
+    "first_token": true,
+    "n_answer_tokens": 1,
+    "generated": " California",
+    "name": "rhyme-chair-flag",
+    "category": "multihop",
+    "answer": "California"
+  },
+  {
+    "exact": false,
+    "first_token": false,
+    "n_answer_tokens": 1,
+    "generated": " the",
+    "name": "rhyme-rain-neighbor",
+    "category": "multihop",
+    "answer": "Portugal"
+  },
+  {
+    "exact": false,
+    "first_token": false,
+    "n_answer_tokens": 1,
+    "generated": " '",
+    "name": "rhyme-spoon-orbit",
+    "category": "multihop",
+    "answer": "Earth"
+  },
+  {
+    "exact": false,
+    "first_token": false,
+    "n_answer_tokens": 1,
+    "generated": " the",
+    "name": "season-next-winter",
+    "category": "season-next",
+    "answer": "spring"
+  },
+  {
+    "exact": true,
+    "first_token": true,
+    "n_answer_tokens": 1,
+    "generated": " Canada",
+    "name": "spaceneedle-border",
+    "category": "multihop",
+    "answer": "Canada"
+  },
+  {
+    "exact": true,
+    "first_token": true,
+    "n_answer_tokens": 2,
+    "generated": " 8",
+    "name": "spider-legs",
+    "category": "multihop",
+    "answer": "8"
+  },
+  {
+    "exact": true,
+    "first_token": true,
+    "n_answer_tokens": 1,
+    "generated": " racket",
+    "name": "sport-equip-tennis",
+    "category": "sport-equip",
+    "answer": "racket"
+  },
+  {
+    "exact": false,
+    "first_token": false,
+    "n_answer_tokens": 1,
+    "generated": " Tokyo",
+    "name": "super-populous-capital",
+    "category": "multihop",
+    "answer": "Beijing"
+  },
+  {
+    "exact": false,
+    "first_token": false,
+    "n_answer_tokens": 1,
+    "generated": " Asia",
+    "name": "super-smallest-continent",
+    "category": "multihop",
+    "answer": "Europe"
+  },
+  {
+    "exact": true,
+    "first_token": true,
+    "n_answer_tokens": 2,
+    "generated": " acorn",
+    "name": "tree-product-oak",
+    "category": "tree-product",
+    "answer": "acorn"
+  },
+  {
+    "exact": false,
+    "first_token": false,
+    "n_answer_tokens": 1,
+    "generated": " muscles",
+    "name": "vehicle-power-bicycle",
+    "category": "vehicle-power",
+    "answer": "legs"
+  },
+  {
+    "exact": true,
+    "first_token": true,
+    "n_answer_tokens": 2,
+    "generated": " 4",
+    "name": "violin-strings",
+    "category": "multihop",
+    "answer": "4"
+  }
+]

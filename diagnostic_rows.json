@@ -1,0 +1,812 @@
+[
+  {
+    "name": "amazon-language",
+    "answer": "Portuguese",
+    "n_answer_tokens": 1,
+    "generated_full": " Portuguese.\nHypothesis:",
+    "strict": true,
+    "prefix": true,
+    "window": true
+  },
+  {
+    "name": "animal-cover-turtle",
+    "answer": "shell",
+    "n_answer_tokens": 1,
+    "generated_full": " shell.\nHypothesis:",
+    "strict": true,
+    "prefix": true,
+    "window": true
+  },
+  {
+    "name": "animal-legs-buffalo2",
+    "answer": "four",
+    "n_answer_tokens": 1,
+    "generated_full": " 4.\nHypothesis",
+    "strict": false,
+    "prefix": false,
+    "window": false
+  },
+  {
+    "name": "animal-nose-elephant",
+    "answer": "trunk",
+    "n_answer_tokens": 1,
+    "generated_full": " trunk.\nQuestion: Does the",
+    "strict": true,
+    "prefix": true,
+    "window": true
+  },
+  {
+    "name": "atomic-80-state",
+    "answer": "liquid",
+    "n_answer_tokens": 1,
+    "generated_full": " a liquid.\nHypothesis",
+    "strict": false,
+    "prefix": false,
+    "window": true
+  },
+  {
+    "name": "basketball-players",
+    "answer": "5",
+    "n_answer_tokens": 2,
+    "generated_full": " 11.\nHypothesis",
+    "strict": false,
+    "prefix": false,
+    "window": false
+  },
+  {
+    "name": "beverage-source-wine",
+    "answer": "grape",
+    "n_answer_tokens": 1,
+    "generated_full": " same fruit that the alcoholic drink served",
+    "strict": false,
+    "prefix": false,
+    "window": false
+  },
+  {
+    "name": "bird-color-swan",
+    "answer": "white",
+    "n_answer_tokens": 1,
+    "generated_full": " white.\nHypothesis:",
+    "strict": true,
+    "prefix": true,
+    "window": true
+  },
+  {
+    "name": "bird-country-eagle",
+    "answer": "America",
+    "n_answer_tokens": 1,
+    "generated_full": " the United States.\nHypo",
+    "strict": false,
+    "prefix": false,
+    "window": false
+  },
+  {
+    "name": "bird-time-owl",
+    "answer": "night",
+    "n_answer_tokens": 1,
+    "generated_full": " the time of day when the sun",
+    "strict": false,
+    "prefix": false,
+    "window": false
+  },
+  {
+    "name": "birthstone-emerald-month",
+    "answer": "5",
+    "n_answer_tokens": 2,
+    "generated_full": " 5.\nQuestion: Which month",
+    "strict": true,
+    "prefix": true,
+    "window": true
+  },
+  {
+    "name": "chem-atmosphere-Z",
+    "answer": "7",
+    "n_answer_tokens": 2,
+    "generated_full": " 19.\nHypothesis",
+    "strict": false,
+    "prefix": false,
+    "window": false
+  },
+  {
+    "name": "chem-bones-Z",
+    "answer": "20",
+    "n_answer_tokens": 3,
+    "generated_full": " 26.\nHypothesis:",
+    "strict": false,
+    "prefix": false,
+    "window": false
+  },
+  {
+    "name": "chem-organic-Z",
+    "answer": "6",
+    "n_answer_tokens": 2,
+    "generated_full": " 6.\nHypothesis:",
+    "strict": true,
+    "prefix": true,
+    "window": true
+  },
+  {
+    "name": "chem-photosynthesis-Z",
+    "answer": "8",
+    "n_answer_tokens": 2,
+    "generated_full": " 6.\nHypothesis:",
+    "strict": false,
+    "prefix": false,
+    "window": false
+  },
+  {
+    "name": "christmas-season",
+    "answer": "winter",
+    "n_answer_tokens": 1,
+    "generated_full": " the season when the holiday with a",
+    "strict": false,
+    "prefix": false,
+    "window": false
+  },
+  {
+    "name": "city-state-Philadelphia",
+    "answer": "Pennsylvania",
+    "n_answer_tokens": 1,
+    "generated_full": " the same state where the Statue of",
+    "strict": false,
+    "prefix": false,
+    "window": false
+  },
+  {
+    "name": "colosseum-currency",
+    "answer": "Euro",
+    "n_answer_tokens": 1,
+    "generated_full": " Euro.\nHypothesis:",
+    "strict": true,
+    "prefix": true,
+    "window": true
+  },
+  {
+    "name": "element-color-gold2",
+    "answer": "yellow",
+    "n_answer_tokens": 1,
+    "generated_full": " gold.\nHypothesis:",
+    "strict": false,
+    "prefix": false,
+    "window": false
+  },
+  {
+    "name": "etym-frigg-position",
+    "answer": "5",
+    "n_answer_tokens": 2,
+    "generated_full": " 5.\nHypothesis:",
+    "strict": true,
+    "prefix": true,
+    "window": true
+  },
+  {
+    "name": "etym-saturn-position",
+    "answer": "6",
+    "n_answer_tokens": 2,
+    "generated_full": " 4 from the sun.\nH",
+    "strict": false,
+    "prefix": false,
+    "window": false
+  },
+  {
+    "name": "etym-wargod-month",
+    "answer": "3",
+    "n_answer_tokens": 2,
+    "generated_full": " 3.\nQuestion: Which month",
+    "strict": true,
+    "prefix": true,
+    "window": true
+  },
+  {
+    "name": "ex-city-capital-Barcelona-Toronto",
+    "answer": "Madrid",
+    "n_answer_tokens": 1,
+    "generated_full": " Madrid.\nHypothesis:",
+    "strict": true,
+    "prefix": true,
+    "window": true
+  },
+  {
+    "name": "ex-city-capital-Lyon-Naples",
+    "answer": "Paris",
+    "n_answer_tokens": 1,
+    "generated_full": " Paris.\nHypothesis:",
+    "strict": true,
+    "prefix": true,
+    "window": true
+  },
+  {
+    "name": "ex-city-capital-Naples-Barcelona",
+    "answer": "Rome",
+    "n_answer_tokens": 1,
+    "generated_full": " Rome.\nHypothesis:",
+    "strict": true,
+    "prefix": true,
+    "window": true
+  },
+  {
+    "name": "ex-city-capital-Toronto-Lyon",
+    "answer": "Ottawa",
+    "n_answer_tokens": 1,
+    "generated_full": " Ottawa.\nHypothesis:",
+    "strict": true,
+    "prefix": true,
+    "window": true
+  },
+  {
+    "name": "ex-city-continent-Toronto-Lyon",
+    "answer": "North",
+    "n_answer_tokens": 1,
+    "generated_full": " North America.\nHypothesis",
+    "strict": true,
+    "prefix": true,
+    "window": true
+  },
+  {
+    "name": "ex-city-currency-Toronto-Beijing",
+    "answer": "Canadian",
+    "n_answer_tokens": 1,
+    "generated_full": " Canadian dollar.\nHypothesis",
+    "strict": true,
+    "prefix": true,
+    "window": true
+  },
+  {
+    "name": "ex-city-currency-Toronto-Mumbai",
+    "answer": "Canadian",
+    "n_answer_tokens": 1,
+    "generated_full": " Canadian dollar.\nHypothesis",
+    "strict": true,
+    "prefix": true,
+    "window": true
+  },
+  {
+    "name": "ex-city-language-Lyon-Naples",
+    "answer": "French",
+    "n_answer_tokens": 1,
+    "generated_full": " French.\nHypothesis:",
+    "strict": true,
+    "prefix": true,
+    "window": true
+  },
+  {
+    "name": "ex-element-state-26-8",
+    "answer": "solid",
+    "n_answer_tokens": 1,
+    "generated_full": " solid.\nHypothesis:",
+    "strict": true,
+    "prefix": true,
+    "window": true
+  },
+  {
+    "name": "ex-element-state-26-80",
+    "answer": "solid",
+    "n_answer_tokens": 1,
+    "generated_full": " solid.\nHypothesis:",
+    "strict": true,
+    "prefix": true,
+    "window": true
+  },
+  {
+    "name": "ex-element-state-8-26",
+    "answer": "gas",
+    "n_answer_tokens": 1,
+    "generated_full": " a gas.\nHypothesis",
+    "strict": false,
+    "prefix": false,
+    "window": true
+  },
+  {
+    "name": "ex-element-state-8-80",
+    "answer": "gas",
+    "n_answer_tokens": 1,
+    "generated_full": " a gas.\nHypothesis",
+    "strict": false,
+    "prefix": false,
+    "window": true
+  },
+  {
+    "name": "ex-element-state-80-8",
+    "answer": "liquid",
+    "n_answer_tokens": 1,
+    "generated_full": " a liquid.\nHypothesis",
+    "strict": false,
+    "prefix": false,
+    "window": true
+  },
+  {
+    "name": "ex-element-symbol-11-26",
+    "answer": "Na",
+    "n_answer_tokens": 1,
+    "generated_full": " Na.\nHypothesis:",
+    "strict": true,
+    "prefix": true,
+    "window": true
+  },
+  {
+    "name": "ex-element-symbol-26-79",
+    "answer": "Fe",
+    "n_answer_tokens": 1,
+    "generated_full": " Fe.\nHypothesis:",
+    "strict": true,
+    "prefix": true,
+    "window": true
+  },
+  {
+    "name": "ex-planet-color-third-fourth",
+    "answer": "blue",
+    "n_answer_tokens": 1,
+    "generated_full": " blue.\nHypothesis:",
+    "strict": true,
+    "prefix": true,
+    "window": true
+  },
+  {
+    "name": "ex2-city-capital-Munich",
+    "answer": "Berlin",
+    "n_answer_tokens": 1,
+    "generated_full": " Berlin.\nHypothesis:",
+    "strict": true,
+    "prefix": true,
+    "window": true
+  },
+  {
+    "name": "ex2-city-capital-Osaka",
+    "answer": "Tokyo",
+    "n_answer_tokens": 1,
+    "generated_full": " Tokyo.\nHypothesis:",
+    "strict": true,
+    "prefix": true,
+    "window": true
+  },
+  {
+    "name": "ex2-city-continent-Lima",
+    "answer": "South",
+    "n_answer_tokens": 1,
+    "generated_full": " South America.\nHypothesis",
+    "strict": true,
+    "prefix": true,
+    "window": true
+  },
+  {
+    "name": "ex2-city-continent-Sydney",
+    "answer": "Australia",
+    "n_answer_tokens": 1,
+    "generated_full": " Australia.\nHypothesis:",
+    "strict": true,
+    "prefix": true,
+    "window": true
+  },
+  {
+    "name": "ex2-city-language-Cairo",
+    "answer": "Arabic",
+    "n_answer_tokens": 1,
+    "generated_full": " Arabic.\nHypothesis:",
+    "strict": true,
+    "prefix": true,
+    "window": true
+  },
+  {
+    "name": "ex2-city-language-Moscow",
+    "answer": "Russian",
+    "n_answer_tokens": 1,
+    "generated_full": " Russian.\nHypothesis:",
+    "strict": true,
+    "prefix": true,
+    "window": true
+  },
+  {
+    "name": "ex2-language-capital-Greek",
+    "answer": "Athens",
+    "n_answer_tokens": 1,
+    "generated_full": " Athens.\nHypothesis:",
+    "strict": true,
+    "prefix": true,
+    "window": true
+  },
+  {
+    "name": "ex2-language-capital-Hungarian",
+    "answer": "Budapest",
+    "n_answer_tokens": 1,
+    "generated_full": " Budapest.\nHypothesis:",
+    "strict": true,
+    "prefix": true,
+    "window": true
+  },
+  {
+    "name": "ex2-language-capital-Polish",
+    "answer": "Warsaw",
+    "n_answer_tokens": 1,
+    "generated_full": " Warsaw.\nHypothesis:",
+    "strict": true,
+    "prefix": true,
+    "window": true
+  },
+  {
+    "name": "ex2-language-capital-Swedish",
+    "answer": "Stockholm",
+    "n_answer_tokens": 1,
+    "generated_full": " Stockholm.\nHypothesis:",
+    "strict": true,
+    "prefix": true,
+    "window": true
+  },
+  {
+    "name": "ex2-river-capital-Thames",
+    "answer": "London",
+    "n_answer_tokens": 1,
+    "generated_full": " London.\nHypothesis:",
+    "strict": true,
+    "prefix": true,
+    "window": true
+  },
+  {
+    "name": "food-animal-butter",
+    "answer": "cow",
+    "n_answer_tokens": 1,
+    "generated_full": " cow.\nQuestion: Which animal",
+    "strict": true,
+    "prefix": true,
+    "window": true
+  },
+  {
+    "name": "food-animal-honey",
+    "answer": "bee",
+    "n_answer_tokens": 1,
+    "generated_full": " honey bee.\nQuestion: Which",
+    "strict": false,
+    "prefix": false,
+    "window": true
+  },
+  {
+    "name": "fruit-grows-grape",
+    "answer": "vine",
+    "n_answer_tokens": 1,
+    "generated_full": " vine.\nHypothesis:",
+    "strict": true,
+    "prefix": true,
+    "window": true
+  },
+  {
+    "name": "func-filters-count",
+    "answer": "2",
+    "n_answer_tokens": 2,
+    "generated_full": " 2.\nHypothesis:",
+    "strict": true,
+    "prefix": true,
+    "window": true
+  },
+  {
+    "name": "func-pumps-chambers",
+    "answer": "4",
+    "n_answer_tokens": 2,
+    "generated_full": " 4.\nHypothesis:",
+    "strict": true,
+    "prefix": true,
+    "window": true
+  },
+  {
+    "name": "gem-color-ruby",
+    "answer": "red",
+    "n_answer_tokens": 1,
+    "generated_full": " red.\nHypothesis:",
+    "strict": true,
+    "prefix": true,
+    "window": true
+  },
+  {
+    "name": "gem-source-pearl",
+    "answer": "oyster",
+    "n_answer_tokens": 2,
+    "generated_full": " pearl oyster.\nQuestion: Which",
+    "strict": false,
+    "prefix": false,
+    "window": true
+  },
+  {
+    "name": "greatwall-ocean",
+    "answer": "Pacific",
+    "n_answer_tokens": 1,
+    "generated_full": " Pacific Ocean.\nHypothesis",
+    "strict": true,
+    "prefix": true,
+    "window": true
+  },
+  {
+    "name": "holiday-month-christmas2",
+    "answer": "December",
+    "n_answer_tokens": 1,
+    "generated_full": " December.\nHypothesis:",
+    "strict": true,
+    "prefix": true,
+    "window": true
+  },
+  {
+    "name": "instr-body-trumpet",
+    "answer": "lips",
+    "n_answer_tokens": 1,
+    "generated_full": " lips.\nHypothesis:",
+    "strict": true,
+    "prefix": true,
+    "window": true
+  },
+  {
+    "name": "instr-hit-drums",
+    "answer": "sticks",
+    "n_answer_tokens": 1,
+    "generated_full": " a drum kit.\nHypo",
+    "strict": false,
+    "prefix": false,
+    "window": false
+  },
+  {
+    "name": "mars-color",
+    "answer": "red",
+    "n_answer_tokens": 1,
+    "generated_full": " blue.\nHypothesis:",
+    "strict": false,
+    "prefix": false,
+    "window": false
+  },
+  {
+    "name": "month-3-godof",
+    "answer": "war",
+    "n_answer_tokens": 1,
+    "generated_full": " war.\nQuestion: Which month",
+    "strict": true,
+    "prefix": true,
+    "window": true
+  },
+  {
+    "name": "organ-acid-stomach",
+    "answer": "acid",
+    "n_answer_tokens": 1,
+    "generated_full": " stomach acid.\nHypothesis",
+    "strict": false,
+    "prefix": false,
+    "window": true
+  },
+  {
+    "name": "organ-count-kidney2",
+    "answer": "two",
+    "n_answer_tokens": 1,
+    "generated_full": " 2.\nHypothesis",
+    "strict": false,
+    "prefix": false,
+    "window": false
+  },
+  {
+    "name": "organ-location-brain",
+    "answer": "skull",
+    "n_answer_tokens": 1,
+    "generated_full": " skull.\nQuestion: What is",
+    "strict": true,
+    "prefix": true,
+    "window": true
+  },
+  {
+    "name": "organ-location-heart",
+    "answer": "chest",
+    "n_answer_tokens": 1,
+    "generated_full": " heart.\nHypothesis:",
+    "strict": false,
+    "prefix": false,
+    "window": false
+  },
+  {
+    "name": "osu-rival-mascot",
+    "answer": "wolverine",
+    "n_answer_tokens": 3,
+    "generated_full": " bear.\nHypothesis: The mascot",
+    "strict": false,
+    "prefix": false,
+    "window": false
+  },
+  {
+    "name": "paper-continent",
+    "answer": "Asia",
+    "n_answer_tokens": 1,
+    "generated_full": " Asia.\nQuestion: Where is",
+    "strict": true,
+    "prefix": true,
+    "window": true
+  },
+  {
+    "name": "person-century-lincoln",
+    "answer": "Civil",
+    "n_answer_tokens": 1,
+    "generated_full": " Civil War.\nHypothesis",
+    "strict": true,
+    "prefix": true,
+    "window": true
+  },
+  {
+    "name": "person-country-napoleon",
+    "answer": "France",
+    "n_answer_tokens": 1,
+    "generated_full": " France.\nHypothesis:",
+    "strict": true,
+    "prefix": true,
+    "window": true
+  },
+  {
+    "name": "person-country-shakespeare",
+    "answer": "England",
+    "n_answer_tokens": 1,
+    "generated_full": " the same country where the playwright who",
+    "strict": false,
+    "prefix": false,
+    "window": false
+  },
+  {
+    "name": "person-firstname-darwin",
+    "answer": "Charles",
+    "n_answer_tokens": 1,
+    "generated_full": " Charles.\nHypothesis:",
+    "strict": true,
+    "prefix": true,
+    "window": true
+  },
+  {
+    "name": "person-firstname-einstein",
+    "answer": "Albert",
+    "n_answer_tokens": 1,
+    "generated_full": " Albert.\nHypothesis:",
+    "strict": true,
+    "prefix": true,
+    "window": true
+  },
+  {
+    "name": "person-firstname-mozart",
+    "answer": "Wolfgang",
+    "n_answer_tokens": 1,
+    "generated_full": " Mozart.\nHypothesis:",
+    "strict": false,
+    "prefix": false,
+    "window": false
+  },
+  {
+    "name": "person-firstname-newton",
+    "answer": "Isaac",
+    "n_answer_tokens": 1,
+    "generated_full": " Isaac Newton.\nQuestion: Which",
+    "strict": true,
+    "prefix": true,
+    "window": true
+  },
+  {
+    "name": "person-firstname-shakespeare",
+    "answer": "William",
+    "n_answer_tokens": 1,
+    "generated_full": " William.\nHypothesis:",
+    "strict": true,
+    "prefix": true,
+    "window": true
+  },
+  {
+    "name": "planet-3-moons",
+    "answer": "1",
+    "n_answer_tokens": 2,
+    "generated_full": " 27.\nHypothesis",
+    "strict": false,
+    "prefix": false,
+    "window": false
+  },
+  {
+    "name": "planet-rings-saturn2",
+    "answer": "rings",
+    "n_answer_tokens": 1,
+    "generated_full": " rings.\nHypothesis:",
+    "strict": true,
+    "prefix": true,
+    "window": true
+  },
+  {
+    "name": "rhyme-chair-flag",
+    "answer": "California",
+    "n_answer_tokens": 1,
+    "generated_full": " California.\nQuestion: Does the",
+    "strict": true,
+    "prefix": true,
+    "window": true
+  },
+  {
+    "name": "rhyme-rain-neighbor",
+    "answer": "Portugal",
+    "n_answer_tokens": 1,
+    "generated_full": " the United Kingdom.\nQuestion:",
+    "strict": false,
+    "prefix": false,
+    "window": false
+  },
+  {
+    "name": "rhyme-spoon-orbit",
+    "answer": "Earth",
+    "n_answer_tokens": 1,
+    "generated_full": " 'Jupiter'.\nQuestion:",
+    "strict": false,
+    "prefix": false,
+    "window": false
+  },
+  {
+    "name": "season-next-winter",
+    "answer": "spring",
+    "n_answer_tokens": 1,
+    "generated_full": " the warmest season.\nQuestion",
+    "strict": false,
+    "prefix": false,
+    "window": false
+  },
+  {
+    "name": "spaceneedle-border",
+    "answer": "Canada",
+    "n_answer_tokens": 1,
+    "generated_full": " Canada.\nHypothesis:",
+    "strict": true,
+    "prefix": true,
+    "window": true
+  },
+  {
+    "name": "spider-legs",
+    "answer": "8",
+    "n_answer_tokens": 2,
+    "generated_full": " 8.\nHypothesis:",
+    "strict": true,
+    "prefix": true,
+    "window": true
+  },
+  {
+    "name": "sport-equip-tennis",
+    "answer": "racket",
+    "n_answer_tokens": 1,
+    "generated_full": " racket.\nHypothesis:",
+    "strict": true,
+    "prefix": true,
+    "window": true
+  },
+  {
+    "name": "super-populous-capital",
+    "answer": "Beijing",
+    "n_answer_tokens": 1,
+    "generated_full": " Tokyo.\nHypothesis:",
+    "strict": false,
+    "prefix": false,
+    "window": false
+  },
+  {
+    "name": "super-smallest-continent",
+    "answer": "Europe",
+    "n_answer_tokens": 1,
+    "generated_full": " Asia.\nQuestion: Is the",
+    "strict": false,
+    "prefix": false,
+    "window": false
+  },
+  {
+    "name": "tree-product-oak",
+    "answer": "acorn",
+    "n_answer_tokens": 2,
+    "generated_full": " acorn.\nQuestion: What is",
+    "strict": true,
+    "prefix": true,
+    "window": true
+  },
+  {
+    "name": "vehicle-power-bicycle",
+    "answer": "legs",
+    "n_answer_tokens": 1,
+    "generated_full": " muscles.\nHypothesis:",
+    "strict": false,
+    "prefix": false,
+    "window": false
+  },
+  {
+    "name": "violin-strings",
+    "answer": "4",
+    "n_answer_tokens": 2,
+    "generated_full": " 4.\nHypothesis:",
+    "strict": true,
+    "prefix": true,
+    "window": true
+  }
+]
