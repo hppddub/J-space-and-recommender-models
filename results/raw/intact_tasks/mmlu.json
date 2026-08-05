@@ -1,0 +1,236 @@
+{
+  "summary": {
+    "task": "mmlu",
+    "clean": 0.6733333333333333,
+    "chance": 0.25,
+    "headroom": {
+      "clean_acc": 0.6733333333333333,
+      "chance": 0.25,
+      "margin_required": 0.15,
+      "usable": true,
+      "reading": "Clean 67.3% vs chance 25.0%. Usable as an intact control: there is room to fall."
+    },
+    "conditions": {
+      "light|topk": {
+        "acc": 0.6733333333333333,
+        "retention_raw": 1.0,
+        "retention_above_chance": 1.0,
+        "answer_flip_rate": 0.09333333333333334
+      },
+      "medium|topk": {
+        "acc": 0.68,
+        "retention_raw": 1.00990099009901,
+        "retention_above_chance": 1.0157480314960632,
+        "answer_flip_rate": 0.11333333333333333
+      },
+      "heavy|topk": {
+        "acc": 0.6866666666666666,
+        "retention_raw": 1.0198019801980198,
+        "retention_above_chance": 1.031496062992126,
+        "answer_flip_rate": 0.14
+      },
+      "heavy-early|topk": {
+        "acc": 0.68,
+        "retention_raw": 1.00990099009901,
+        "retention_above_chance": 1.0157480314960632,
+        "answer_flip_rate": 0.17333333333333334
+      },
+      "heavy-late|topk": {
+        "acc": 0.7,
+        "retention_raw": 1.0396039603960396,
+        "retention_above_chance": 1.0629921259842519,
+        "answer_flip_rate": 0.07333333333333333
+      },
+      "heavy-paper|topk": {
+        "acc": 0.6466666666666666,
+        "retention_raw": 0.9603960396039604,
+        "retention_above_chance": 0.9370078740157479,
+        "answer_flip_rate": 0.17333333333333334
+      },
+      "heavy|next_k": {
+        "acc": 0.7133333333333334,
+        "retention_raw": 1.0594059405940595,
+        "retention_above_chance": 1.094488188976378,
+        "answer_flip_rate": 0.12666666666666668
+      },
+      "heavy|random_lens|0": {
+        "acc": 0.6866666666666666,
+        "retention_raw": 1.0198019801980198,
+        "retention_above_chance": 1.031496062992126,
+        "answer_flip_rate": 0.04
+      },
+      "heavy|random_iso|0": {
+        "acc": 0.66,
+        "retention_raw": 0.9801980198019802,
+        "retention_above_chance": 0.9685039370078741,
+        "answer_flip_rate": 0.04
+      },
+      "heavy|random_lens|1": {
+        "acc": 0.6866666666666666,
+        "retention_raw": 1.0198019801980198,
+        "retention_above_chance": 1.031496062992126,
+        "answer_flip_rate": 0.04666666666666667
+      },
+      "heavy|random_iso|1": {
+        "acc": 0.66,
+        "retention_raw": 0.9801980198019802,
+        "retention_above_chance": 0.9685039370078741,
+        "answer_flip_rate": 0.03333333333333333
+      },
+      "heavy|random_lens|2": {
+        "acc": 0.6733333333333333,
+        "retention_raw": 1.0,
+        "retention_above_chance": 1.0,
+        "answer_flip_rate": 0.03333333333333333
+      },
+      "heavy|random_iso|2": {
+        "acc": 0.6533333333333333,
+        "retention_raw": 0.9702970297029703,
+        "retention_above_chance": 0.952755905511811,
+        "answer_flip_rate": 0.02
+      },
+      "heavy|random_lens|3": {
+        "acc": 0.68,
+        "retention_raw": 1.00990099009901,
+        "retention_above_chance": 1.0157480314960632,
+        "answer_flip_rate": 0.013333333333333334
+      },
+      "heavy|random_iso|3": {
+        "acc": 0.6733333333333333,
+        "retention_raw": 1.0,
+        "retention_above_chance": 1.0,
+        "answer_flip_rate": 0.02666666666666667
+      },
+      "heavy|random_lens|4": {
+        "acc": 0.66,
+        "retention_raw": 0.9801980198019802,
+        "retention_above_chance": 0.9685039370078741,
+        "answer_flip_rate": 0.04666666666666667
+      },
+      "heavy|random_iso|4": {
+        "acc": 0.68,
+        "retention_raw": 1.00990099009901,
+        "retention_above_chance": 1.0157480314960632,
+        "answer_flip_rate": 0.02666666666666667
+      }
+    },
+    "primary": {
+      "heavy|topk": {
+        "acc": 0.6866666666666666,
+        "retention_raw": 1.0198019801980198,
+        "retention_above_chance": 1.031496062992126,
+        "answer_flip_rate": 0.14
+      }
+    }
+  },
+  "raw": {
+    "clean": {
+      "acc": 0.6733333333333333,
+      "k": 101,
+      "n": 150,
+      "answer_flip_rate": 0.0
+    },
+    "light|topk": {
+      "acc": 0.6733333333333333,
+      "k": 101,
+      "n": 150,
+      "answer_flip_rate": 0.09333333333333334
+    },
+    "medium|topk": {
+      "acc": 0.68,
+      "k": 102,
+      "n": 150,
+      "answer_flip_rate": 0.11333333333333333
+    },
+    "heavy|topk": {
+      "acc": 0.6866666666666666,
+      "k": 103,
+      "n": 150,
+      "answer_flip_rate": 0.14
+    },
+    "heavy-early|topk": {
+      "acc": 0.68,
+      "k": 102,
+      "n": 150,
+      "answer_flip_rate": 0.17333333333333334
+    },
+    "heavy-late|topk": {
+      "acc": 0.7,
+      "k": 105,
+      "n": 150,
+      "answer_flip_rate": 0.07333333333333333
+    },
+    "heavy-paper|topk": {
+      "acc": 0.6466666666666666,
+      "k": 97,
+      "n": 150,
+      "answer_flip_rate": 0.17333333333333334
+    },
+    "heavy|next_k": {
+      "acc": 0.7133333333333334,
+      "k": 107,
+      "n": 150,
+      "answer_flip_rate": 0.12666666666666668
+    },
+    "heavy|random_lens|0": {
+      "acc": 0.6866666666666666,
+      "k": 103,
+      "n": 150,
+      "answer_flip_rate": 0.04
+    },
+    "heavy|random_iso|0": {
+      "acc": 0.66,
+      "k": 99,
+      "n": 150,
+      "answer_flip_rate": 0.04
+    },
+    "heavy|random_lens|1": {
+      "acc": 0.6866666666666666,
+      "k": 103,
+      "n": 150,
+      "answer_flip_rate": 0.04666666666666667
+    },
+    "heavy|random_iso|1": {
+      "acc": 0.66,
+      "k": 99,
+      "n": 150,
+      "answer_flip_rate": 0.03333333333333333
+    },
+    "heavy|random_lens|2": {
+      "acc": 0.6733333333333333,
+      "k": 101,
+      "n": 150,
+      "answer_flip_rate": 0.03333333333333333
+    },
+    "heavy|random_iso|2": {
+      "acc": 0.6533333333333333,
+      "k": 98,
+      "n": 150,
+      "answer_flip_rate": 0.02
+    },
+    "heavy|random_lens|3": {
+      "acc": 0.68,
+      "k": 102,
+      "n": 150,
+      "answer_flip_rate": 0.013333333333333334
+    },
+    "heavy|random_iso|3": {
+      "acc": 0.6733333333333333,
+      "k": 101,
+      "n": 150,
+      "answer_flip_rate": 0.02666666666666667
+    },
+    "heavy|random_lens|4": {
+      "acc": 0.66,
+      "k": 99,
+      "n": 150,
+      "answer_flip_rate": 0.04666666666666667
+    },
+    "heavy|random_iso|4": {
+      "acc": 0.68,
+      "k": 102,
+      "n": 150,
+      "answer_flip_rate": 0.02666666666666667
+    }
+  }
+}
