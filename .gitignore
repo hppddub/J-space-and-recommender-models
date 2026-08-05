@@ -1,0 +1,19 @@
+__pycache__/
+*.pyc
+.venv/
+venv/
+.ipynb_checkpoints/
+.DS_Store
+
+# Model weights and large binaries — never committed
+*.safetensors
+*.bin
+*.pt
+*.pth
+
+# Large numeric artifacts. JSON results ARE committed: they are the evidence.
+results/raw/**/*.npy
+results/raw/**/*.npz
+
+# Vendored upstream is cloned, not committed.
+third_party/jacobian-lens/
