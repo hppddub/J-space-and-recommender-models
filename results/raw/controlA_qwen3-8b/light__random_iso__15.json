@@ -1,0 +1,51 @@
+{
+  "condition": "light|random_iso|15",
+  "spec": {
+    "layers": [
+      20,
+      21,
+      22,
+      23
+    ],
+    "k": 10,
+    "selector": "random_iso",
+    "seed": 20275732,
+    "exclude_clean_top": 10,
+    "mode": "subspace",
+    "positions": null
+  },
+  "git_commit": "UNKNOWN",
+  "strict_single": {
+    "k": 50,
+    "n": 73,
+    "acc": 0.684931506849315
+  },
+  "first_token_all": {
+    "k": 62,
+    "n": 90,
+    "acc": 0.6888888888888889
+  },
+  "by_category": {
+    "city-capital": {
+      "n": 6,
+      "acc": 1.0
+    },
+    "element-state": {
+      "n": 5,
+      "acc": 0.4
+    },
+    "language-capital": {
+      "n": 4,
+      "acc": 1.0
+    },
+    "multihop": {
+      "n": 14,
+      "acc": 0.5714285714285714
+    },
+    "person-firstname": {
+      "n": 5,
+      "acc": 1.0
+    }
+  },
+  "seconds": 10.0
+}
