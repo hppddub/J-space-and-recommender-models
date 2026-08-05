@@ -1,0 +1,66 @@
+{
+  "condition": "heavy-paper|random_iso|17",
+  "spec": {
+    "layers": [
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24,
+      25,
+      26,
+      27,
+      28,
+      29,
+      30,
+      31
+    ],
+    "k": 10,
+    "selector": "random_iso",
+    "seed": 20277747,
+    "exclude_clean_top": 10,
+    "mode": "subspace",
+    "positions": null
+  },
+  "git_commit": "UNKNOWN",
+  "strict_single": {
+    "k": 39,
+    "n": 73,
+    "acc": 0.5342465753424658
+  },
+  "first_token_all": {
+    "k": 52,
+    "n": 90,
+    "acc": 0.5777777777777777
+  },
+  "by_category": {
+    "city-capital": {
+      "n": 6,
+      "acc": 0.8333333333333334
+    },
+    "element-state": {
+      "n": 5,
+      "acc": 0.4
+    },
+    "language-capital": {
+      "n": 4,
+      "acc": 1.0
+    },
+    "multihop": {
+      "n": 14,
+      "acc": 0.35714285714285715
+    },
+    "person-firstname": {
+      "n": 5,
+      "acc": 1.0
+    }
+  },
+  "seconds": 29.7
+}

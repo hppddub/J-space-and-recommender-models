@@ -1,0 +1,65 @@
+{
+  "condition": "heavy-late|topk",
+  "spec": {
+    "layers": [
+      24,
+      25,
+      26,
+      27,
+      28,
+      29,
+      30,
+      31
+    ],
+    "k": 10,
+    "selector": "topk",
+    "seed": null,
+    "exclude_clean_top": 10,
+    "mode": "subspace",
+    "positions": null
+  },
+  "git_commit": "UNKNOWN",
+  "strict_single": {
+    "k": 9,
+    "n": 73,
+    "acc": 0.1232876712328767
+  },
+  "first_token_all": {
+    "k": 23,
+    "n": 90,
+    "acc": 0.25555555555555554
+  },
+  "by_category": {
+    "city-capital": {
+      "n": 6,
+      "acc": 0.16666666666666666
+    },
+    "element-state": {
+      "n": 5,
+      "acc": 0.0
+    },
+    "language-capital": {
+      "n": 4,
+      "acc": 0.0
+    },
+    "multihop": {
+      "n": 14,
+      "acc": 0.07142857142857142
+    },
+    "person-firstname": {
+      "n": 5,
+      "acc": 0.6
+    }
+  },
+  "seconds": 12.4,
+  "intact": {
+    "n_prompts": 20,
+    "n_positions": 2480,
+    "top1_match": 0.6129032135009765,
+    "top5_overlap": 0.6030645102262497,
+    "mean_kl": 2.8179105460643767,
+    "clean_ce": 3.118814480304718,
+    "ablated_ce": 6.9495138168334964,
+    "ce_delta": 3.8306993365287783
+  }
+}

@@ -1,0 +1,56 @@
+{
+  "condition": "clean",
+  "spec": {
+    "layers": [],
+    "k": 0,
+    "selector": "none",
+    "seed": null,
+    "exclude_clean_top": 10,
+    "mode": "subspace",
+    "positions": null
+  },
+  "git_commit": "UNKNOWN",
+  "strict_single": {
+    "k": 50,
+    "n": 73,
+    "acc": 0.684931506849315
+  },
+  "first_token_all": {
+    "k": 63,
+    "n": 90,
+    "acc": 0.7
+  },
+  "by_category": {
+    "city-capital": {
+      "n": 6,
+      "acc": 1.0
+    },
+    "element-state": {
+      "n": 5,
+      "acc": 0.4
+    },
+    "language-capital": {
+      "n": 4,
+      "acc": 1.0
+    },
+    "multihop": {
+      "n": 14,
+      "acc": 0.5714285714285714
+    },
+    "person-firstname": {
+      "n": 5,
+      "acc": 1.0
+    }
+  },
+  "seconds": 0.0,
+  "intact": {
+    "n_prompts": 20,
+    "n_positions": 2480,
+    "top1_match": 1.0,
+    "top5_overlap": 1.0,
+    "mean_kl": 0.0,
+    "clean_ce": 3.118814480304718,
+    "ablated_ce": 3.118814480304718,
+    "ce_delta": 0.0
+  }
+}
