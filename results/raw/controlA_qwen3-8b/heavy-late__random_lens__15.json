@@ -1,0 +1,55 @@
+{
+  "condition": "heavy-late|random_lens|15",
+  "spec": {
+    "layers": [
+      24,
+      25,
+      26,
+      27,
+      28,
+      29,
+      30,
+      31
+    ],
+    "k": 10,
+    "selector": "random_lens",
+    "seed": 20275736,
+    "exclude_clean_top": 10,
+    "mode": "subspace",
+    "positions": null
+  },
+  "git_commit": "UNKNOWN",
+  "strict_single": {
+    "k": 50,
+    "n": 73,
+    "acc": 0.684931506849315
+  },
+  "first_token_all": {
+    "k": 63,
+    "n": 90,
+    "acc": 0.7
+  },
+  "by_category": {
+    "city-capital": {
+      "n": 6,
+      "acc": 1.0
+    },
+    "element-state": {
+      "n": 5,
+      "acc": 0.4
+    },
+    "language-capital": {
+      "n": 4,
+      "acc": 1.0
+    },
+    "multihop": {
+      "n": 14,
+      "acc": 0.5
+    },
+    "person-firstname": {
+      "n": 5,
+      "acc": 1.0
+    }
+  },
+  "seconds": 13.4
+}
