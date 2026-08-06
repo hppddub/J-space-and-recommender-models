@@ -569,3 +569,147 @@ Not decided today. Recorded so it is a decision rather than a default.
   code ran, not whether the reported numbers came from the reported procedure.
   Recorded so the question is visible rather than assumed away.
 
+---
+
+## [2026-08-05] Session 20 — Perturbation-magnitude instrumentation; a test that had never run
+
+**Phase:** Writing track / Phase 3 preparation.
+**Read-first sections re-read today:** `EXECUTION_GUIDE.md` §2.4 (pre-registration
+before the run it governs); `AI_COLLABORATION_GUIDE.md` §1.2; literature Cluster E
+notes in `lit/candidates.md` (threat T1).
+**Hardware:** Colab, CPU runtime for tests · **CU spent:** negligible
+
+---
+
+### What was run
+
+- **Script / notebook:** `python -m pytest tests/ -v` on Colab, against the
+  repository at the commit below.
+- **Code changes:** perturbation-magnitude recording added to
+  `src/ablation/harness.py`; two tests added to `tests/test_ablation.py`;
+  hardcoded sandbox path removed from all four `tests/test_*.py`;
+  `TinyDecoder.unembed` dtype handling corrected in `tests/tests_tiny.py`.
+- **Document changes:** `preregistration/prereg_phase3_draft.md` §1 and new §3.1.
+- **Git commit:** `026b869` and preceding.
+
+---
+
+### Result
+
+**1. Perturbation-magnitude recording is in place.** The harness now records
+`‖h − h′‖` and `‖h‖` per layer at ablated positions, for every condition, and
+returns per-layer summary statistics on `AblationResult.perturbation`. Cost is
+nil: the removed component was already computed in order to be zeroed.
+
+Pre-registered in §3.1 as **report-only** — it gates no claim. Interpretation
+language for each possible outcome is fixed there in advance, so a disparity
+cannot be quietly omitted and a convenient result cannot be recruited.
+
+**2. The test suite had a hardcoded path to an environment that does not exist.**
+All four test files carried `sys.path.insert(0, "/home/claude/jacobian-lens")` on
+line 4 — a path inside the AI assistant's sandbox. As committed, the suite could
+only run there. Replaced with an optional `JLENS_PATH` environment variable,
+falling back to the installed package.
+
+**3. A GPU-only test had been silently skipped since it was written, and fails
+when actually run.** `test_harness_works_with_a_bfloat16_model_on_gpu` is marked
+`skipif(not torch.cuda.is_available())`. No prior test execution had a GPU, so it
+had never executed. Run on Colab, it failed:
+`RuntimeError: expected scalar type Float but found BFloat16`.
+
+**4. The cause was test-double drift, not a harness fault.** The real
+`HFLensModel.unembed` (`jlens/hf.py:166`) casts the residual to the lm_head's
+dtype. `TinyDecoder.unembed` cast unconditionally to float32. Under a bfloat16
+model, the double fed float32 into a LayerNorm holding bfloat16 parameters.
+Corrected to mirror production. **56 passed** after the fix.
+
+**5. The Phase 0 diagnostic did not run.** Two attempts to produce a working
+Colab notebook failed — the first collapsed every cell to one line (missing
+newline terminators in the `.ipynb` source arrays), the second still did not open
+correctly for reasons not diagnosed. Deferred rather than debugged further.
+
+---
+
+### Reading of the result
+
+**Finding 3 is the substantive one and it does not invalidate Control A.**
+Control A ran on the real `HFLensModel`, whose dtype handling is correct, and ran
+to completion. The failure is confined to the synthetic double.
+
+What it does invalidate is an *assurance*. This test exists specifically to verify
+the harness in bfloat16 on GPU — the exact configuration Control A ran in — and it
+was written after the Phase 0 session in which a `prepare_lens` dtype cast broke
+Stage B. It was written to guard the thing that had already broken once, and it
+provided no coverage at all for its entire life. Any statement in the Phase 0
+record to the effect that the bf16 path is tested was false until today.
+
+**The pattern across Sessions 18 and 20 is the same failure mode twice.** A
+mechanism that reports success when it has silently done nothing: `git_commit`
+returning the string `"UNKNOWN"` on failure, and a test reporting a pass by being
+skipped. Neither was caught by reading the code; both were caught by running it in
+a different environment. **The general lesson: verification that can no-op quietly
+is not verification.** Where feasible, such mechanisms should fail loudly —
+`src/provenance.py` now raises rather than returning a placeholder, and the
+suite should be run somewhere with a GPU before any claim about GPU coverage.
+
+**Nothing today bears on H1, H2 or H3.** The instrumentation makes a future
+measurement possible; it does not constitute one.
+
+---
+
+### The three questions
+
+1. **Which claim does today's work support?** None — instrumentation and test
+   maintenance.
+2. **Did I import any property of J-space by assumption today?** No. §3.1 was
+   deliberately written as report-only with no threshold, because any numeric
+   cut-off chosen before recommender magnitudes exist would be arbitrary and one
+   chosen afterwards would be post-hoc.
+3. **Would this step still be defensible if the final result is null?** Yes.
+   Perturbation magnitude is more informative under a null than under a positive:
+   it distinguishes "the directions did not matter" from "the intervention barely
+   fired."
+
+---
+
+### Deviations
+
+`prereg_phase3_draft.md` §1 and §3.1 were edited while the document remains
+**unsigned**. This is drafting, not amendment; no entry in `amendments.md` is
+required. The same change after signature would require one.
+
+---
+
+### Next step — PARKED, to resume
+
+**The Phase 0 perturbation diagnostic has not been run.** Everything it needs is
+committed and the test suite passes. Only the notebook is missing.
+
+To resume:
+
+- Prefer a **plain Python script pasted into one Colab cell** over an uploaded
+  `.ipynb`. Two attempts at notebook generation failed; the format is not worth
+  further debugging when a script is equivalent.
+- The run reproduces Control A's grid exactly: `STRENGTHS` and the seed derivation
+  `BASE_SEED + 1000*d + len(layers)` from `scripts/run_control_a.py:37-79`,
+  `BASE_SEED = 20260728`, bfloat16, `max_seq_len=128`. These must not be altered —
+  the point is measuring what Control A did.
+- Clone `jacobian-lens` with an explicit
+  `git checkout 581d398613e5602a5af361e1c34d3a92ea82ba8e`, not `--depth 1`.
+- **Check `clean` returns zero removed norm before reading anything else.**
+- Estimated 15–30 minutes on A100.
+
+**Prediction, recorded now and before the run:** `random_iso` removes materially
+less norm than `random_lens`, which removes less than the candidate. If so, the
+original paper's own control is the weaker of the two nulls and Phase 3 should
+report primarily against `random_lens`. If the prediction fails and the nulls
+remove comparable norm, the matched-size control was already sufficient and
+threat T1 is answered outright — the better outcome, and one to state plainly
+rather than bury.
+
+**Also still open, unchanged:**
+
+- Literature clusters C, D, F and G: zero queries run. No absence claim is
+  available for any of them.
+- Repository visibility decision (Session 19).
+- Anonymised mirror for C5.
