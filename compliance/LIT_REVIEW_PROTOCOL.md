@@ -1,3 +1,6 @@
+> **SUPERSEDED 2026-08-05 by lit/LIT_REVIEW_PLAN.md** — written before Phase 0
+> results and the compliance ledger existed. Retained for the record.
+
 # Literature Review Protocol — R-Space Generalization Test
 
 **Repo location:** `proposal/LIT_REVIEW_PROTOCOL.md`
