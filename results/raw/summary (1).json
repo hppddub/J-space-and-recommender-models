@@ -1,0 +1,61 @@
+{
+  "model": "Qwen/Qwen3-4B",
+  "n": 90,
+  "exact": {
+    "k": 50,
+    "acc": 0.5555555555555556,
+    "wilson95": [
+      0.4527174112548652,
+      0.6538451366982815
+    ]
+  },
+  "first_token": {
+    "k": 53,
+    "acc": 0.5888888888888889,
+    "wilson95": [
+      0.48563048727714275,
+      0.6848695894478919
+    ]
+  },
+  "prefix": {
+    "k": 50
+  },
+  "window": {
+    "k": 58
+  },
+  "answer_token_lengths": {
+    "1": 73,
+    "2": 15,
+    "3": 2
+  },
+  "by_category_n_ge_4": {
+    "city-capital": {
+      "n": 6,
+      "acc": 0.6666666666666666
+    },
+    "element-state": {
+      "n": 5,
+      "acc": 0.4
+    },
+    "language-capital": {
+      "n": 4,
+      "acc": 1.0
+    },
+    "multihop": {
+      "n": 29,
+      "acc": 0.4482758620689655
+    },
+    "person-firstname": {
+      "n": 5,
+      "acc": 0.8
+    }
+  },
+  "git_commit": "UNKNOWN",
+  "config": {
+    "model": "Qwen/Qwen3-4B",
+    "data": "jacobian-lens/data/experiments/probe-swap.json",
+    "out": "results/raw/headroom_qwen3-4b/",
+    "dtype": "float16",
+    "limit": null
+  }
+}
