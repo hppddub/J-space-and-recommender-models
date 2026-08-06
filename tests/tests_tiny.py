@@ -84,4 +84,10 @@ class TinyDecoder(nn.Module):
         return SimpleNamespace(last_hidden_state=hidden)
 
     def unembed(self, residual: torch.Tensor) -> torch.Tensor:
-        return self.lm_head(self.norm(residual.float()))
+        # Mirror HFLensModel.unembed (jlens/hf.py:166): cast to the head's
+        # dtype, not unconditionally to float32. The unconditional .float()
+        # diverged from production and made the bf16-on-GPU test unrunnable —
+        # invisibly, since that test is GPU-only and had never been executed.
+        target_dtype = self.lm_head.weight.dtype
+        target_device = self.lm_head.weight.device
+        return self.lm_head(self.norm(residual.to(target_dtype).to(target_device)))
