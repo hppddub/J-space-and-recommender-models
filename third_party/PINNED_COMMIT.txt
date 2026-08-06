@@ -1,0 +1,43 @@
+# Pinned upstream commits
+
+## anthropics/jacobian-lens
+
+```
+repository: https://github.com/anthropics/jacobian-lens
+commit:     581d398613e5602a5af361e1c34d3a92ea82ba8e
+date:       2026-07-02 09:07:51 +0000
+subject:    Initial release
+licence:    see upstream LICENSE; recorded in compliance/LICENCES.md
+```
+
+**Provenance of this pin.** Phase 0 notebooks cloned with
+`git clone -q --depth 1`, which records no commit and pins nothing — it takes
+whatever HEAD was on the day. The exact commit was therefore not captured at run
+time.
+
+It is nonetheless known with certainty, because the upstream repository contained
+exactly one commit as of 2026-08-05. Every Phase 0 clone necessarily obtained
+`581d398`. Verified by cloning the full history on 2026-08-05:
+
+```
+$ git log --format="%H %ci %s"
+581d398613e5602a5af361e1c34d3a92ea82ba8e 2026-07-02 09:07:51 +0000 Initial release
+```
+
+This is a reconstruction, not a contemporaneous record. It is reliable here only
+because the history is a single commit. **Do not rely on the same argument for
+Phase 1 onward** — if upstream gains commits, an unpinned clone becomes genuinely
+ambiguous.
+
+## Required change for Phase 1 onward
+
+Replace every unpinned clone with an explicit checkout:
+
+```bash
+git clone -q https://github.com/anthropics/jacobian-lens.git
+cd jacobian-lens
+git checkout 581d398613e5602a5af361e1c34d3a92ea82ba8e
+```
+
+`--depth 1` and `git checkout <hash>` do not combine cleanly. Drop `--depth 1`;
+the repository is small.
