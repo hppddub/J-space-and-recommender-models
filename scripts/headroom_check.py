@@ -18,6 +18,7 @@ Usage:
 """
 
 from __future__ import annotations
+from provenance import git_commit
 
 import argparse
 import json
