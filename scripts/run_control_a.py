@@ -61,14 +61,6 @@ def norm(prompt: str, answer: str) -> tuple[str, str]:
     return prompt.rstrip(), " " + answer.strip()
 
 
-def git_commit() -> str:
-    try:
-        return subprocess.check_output(["git", "rev-parse", "HEAD"], text=True,
-                                       stderr=subprocess.DEVNULL).strip()
-    except Exception:
-        return "UNKNOWN"
-
-
 def build_grid(n_draws: int, base_seed: int) -> list[tuple[str, AblationSpec]]:
     """Candidate + matched controls at every strength (prereg §4.1: 19 draws)."""
     grid: list[tuple[str, AblationSpec]] = [
