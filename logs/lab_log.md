@@ -171,7 +171,7 @@ labour), §3 (risky request patterns, rows 10 and 12), §4.1 (standing loop);
 - **Artifacts created:** `LIT_REVIEW_PLAN.md`, `lit/DECISION_lit_review_scope.md`,
   `lit/searches_log.md`, `lit/candidates.md`, `lit/claim_ledger.md` (empty
   structure).
-- **Git commit:** `<fill in>`
+- **Git commit:** `779c147`
 - **Seeds / config / runtime:** n/a.
 
 **Bookkeeping error to fix before commit.** `DECISION_lit_review_scope.md` and
