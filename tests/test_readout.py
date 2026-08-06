@@ -1,7 +1,10 @@
 """Tests for Stage B2 readout verification. Synthetic, CPU only."""
-import sys, pathlib
+import sys, os, pathlib
 sys.path.insert(0, str(pathlib.Path(__file__).resolve().parents[1] / "src"))
-sys.path.insert(0, "/home/claude/jacobian-lens")
+# jlens: use JLENS_PATH if set, else rely on it being pip-installed.
+_jl = os.environ.get("JLENS_PATH")
+if _jl:
+    sys.path.insert(0, _jl)
 
 import pytest, torch, jlens
 from tests_tiny import TinyDecoder  # noqa
