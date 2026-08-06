@@ -9,6 +9,7 @@ directory (guide §1.2). "It was in the session I lost" does not survive review.
 """
 
 from __future__ import annotations
+from provenance import git_commit
 
 import json
 import subprocess
