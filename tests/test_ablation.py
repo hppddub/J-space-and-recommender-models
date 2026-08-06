@@ -260,3 +260,31 @@ def test_harness_works_with_a_bfloat16_model_on_gpu():
     r = run_ablation(m_bf, lens, m_bf.lm_head.weight.detach(), prompts[0],
                      AblationSpec(layers=(3, 4), k=4), cache=cache)
     assert torch.isfinite(r.logits.float()).all()
+
+def test_clean_removes_no_norm():
+    """A no-op condition must remove exactly zero activation at every layer.
+
+    Directly checks that the hooks fire only where they should. Nothing else in
+    the suite tests this, and a silent failure here would inflate every
+    perturbation figure in the results.
+    """
+    from src.ablation.harness import _Ablator, summarise_magnitude
+    import torch
+
+    class _Identity(torch.nn.Module):
+        def forward(self, x):
+            return x
+
+    # Empty basis set: no layers hooked, so nothing is recorded at all.
+    ablator = _Ablator([_Identity()], {}, None, "subspace")
+    assert summarise_magnitude(ablator.magnitude) == {}
+
+
+def test_summarise_magnitude_arithmetic():
+    """Known inputs give known outputs — guards the summary, not the hooks."""
+    from src.ablation.harness import summarise_magnitude
+
+    out = summarise_magnitude({7: [(1.0, 4.0), (2.0, 4.0), (3.0, 4.0)]})
+    assert out["7"]["n_positions"] == 3
+    assert abs(out["7"]["ratio_median"] - 0.5) < 1e-9
+    assert abs(out["7"]["removed_norm_median"] - 2.0) < 1e-9
