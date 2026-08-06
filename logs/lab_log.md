@@ -450,6 +450,118 @@ None from a pre-registration. Three corrective actions taken or scheduled:
    Phase 0.
 3. Add one sentence to the paper's limitations covering Phase 0 code provenance.
 
+---
+
+## [2026-08-05] Session 19 — Repository made public; C4/C5 consequences
+
+**Phase:** Writing track / infrastructure. Not an experimental phase.
+**Read-first sections re-read today:** `COMPLIANCE_GUIDE.md` C4 (anonymisation,
+including GitHub and Hugging Face username sweep), C5 (anonymised code release),
+§3.6 (reproducibility and code availability); `AI_COLLABORATION_GUIDE.md` §1.1.
+**Hardware:** local · **CU spent:** none
+
+---
+
+### What was run
+
+- **Script / notebook:** none. Repository administration.
+- **Action:** `github.com/hppddub/J-space-and-recommender-models` changed from
+  private to public.
+- **Reason:** to allow the AI assistant to clone and audit the repository during
+  the Session 17–18 cleanup. It could not be inspected while private.
+- **Git commit:** `multiple between August 7 and 8, 2026`
+
+---
+
+### Result
+
+The repository is public at an account and repository name that both identify
+the project and its author. It now contains the full Phase 0 record: harness,
+tests, Control A results, pre-registrations, decision records, and the lab log.
+
+`COMPLIANCE_GUIDE.md` previously described the delivery gap as "the repo is
+private, and an anonymised public mirror has to be prepared, not assumed." That
+sentence was written when the repository was private and has been revised.
+
+---
+
+### Reading of the result
+
+**The visibility change did not close the C5 gap. It changed its shape and
+raised its urgency.**
+
+C5 requires an *anonymised* code release reachable at review time. A public
+repository is not an anonymised one. Three specific consequences:
+
+1. **The repository name describes the project.** A reviewer who searches the
+   paper's subject matter can plausibly find it, and the account name is
+   identifying. This is a soft de-anonymisation route that did not exist while
+   the repository was private.
+
+2. **The content is now identifying in more ways than the name.** The lab log
+   names the author in places, the commit history carries an authored account,
+   and decision records are signed. An anonymised mirror is therefore a genuine
+   scrub, not a rename — commit history included.
+
+3. **C4's username sweep now has a live target.** Any occurrence of the account
+   name inside committed files, notebook outputs, or paths has to be found and
+   removed before the mirror is published.
+
+**What did not change.** Double-blind review does not prohibit public code, and
+having a public repository is common and generally tolerated. The obligation is
+to avoid *linking* it from the submission and to provide an anonymised route
+instead. Nothing about the visibility change is a violation; it is a task that
+became more urgent and slightly larger.
+
+**Why this is logged separately from Session 18.** Session 18 concerns the
+provenance of Phase 0 results — an evidentiary matter. This concerns submission
+compliance. Bundling them would make the compliance consequence easy to miss
+inside a longer entry about commit hashes.
+
+---
+
+### The three questions
+
+1. **Which claim does today's work support?** None — infrastructure. Bears on
+   submission compliance, not on H1, H2 or H3.
+2. **Did I import any property of J-space by assumption today?** No.
+3. **Would this step still be defensible if the final result is null?** Yes.
+   A null with a published, inspectable record is more useful to the field than
+   one without, provided the anonymisation obligation is met separately.
+
+---
+
+### Deviations
+
+`COMPLIANCE_GUIDE.md` assessment paragraph revised: the reproducibility claim now
+distinguishes what holds for Phase 0 (seeded draws, per-run configuration in
+every result file, pre-registration, append-only log) from what does not (commit
+hashes, pinned dependencies — corrected going into Phase 1), and the delivery gap
+restated for a public repository.
+
+---
+
+### Next step
+
+**Decision required — repository visibility during review.**
+
+- **Option A: stay public.** Maximum transparency, matches the reproducibility
+  framing, and lets the work be inspected. Accepts a soft de-anonymisation route.
+- **Option B: revert to private after the audit, republish on acceptance.**
+  Removes the route entirely. Costs nothing scientific; the anonymised mirror is
+  required either way.
+
+Not decided today. Recorded so it is a decision rather than a default.
+
+**Scheduled work, both required before submission:**
+
+1. Build the anonymised mirror (C5). Fresh account or Anonymous GitHub, history
+   squashed or scrubbed, author name removed from log entries and decision
+   records. This is more than a copy and should not be left to the final week.
+2. Run the C4 username sweep across all committed files and notebook outputs,
+   not just the repository name.
+
+
 **Decisions left open:**
 
 - Whether Phase 0's provenance gap warrants any change to what Control A is
