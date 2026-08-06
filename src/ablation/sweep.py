@@ -19,14 +19,6 @@ from typing import Any, Callable, Iterable, Sequence
 from .harness import AblationSpec
 
 
-def git_commit() -> str:
-    try:
-        return subprocess.check_output(
-            ["git", "rev-parse", "HEAD"], text=True, stderr=subprocess.DEVNULL
-        ).strip()
-    except Exception:
-        return "UNKNOWN-NOT-A-GIT-CHECKOUT"
-
 
 def build_conditions(
     bands: dict[str, Sequence[int]],
