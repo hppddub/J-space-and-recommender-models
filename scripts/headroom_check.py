@@ -151,6 +151,7 @@ def main() -> None:
             c: {"n": len(v), "acc": sum(v) / len(v)}
             for c, v in sorted(by_cat.items()) if len(v) >= 4
         },
+        "git_commit": git_commit(),
         "config": vars(args),
     }
 
