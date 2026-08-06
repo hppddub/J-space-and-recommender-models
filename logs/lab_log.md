@@ -332,3 +332,128 @@ Draft in progress.
 - Whether the third-party replication repository is citable at all. Its README
   mischaracterised a primary source that is one click away. That is a reason for
   caution about the rest of it.
+
+  ---
+
+## [2026-08-05] Session 18 — Repository audit: provenance gap in Phase 0 results
+
+**Phase:** Writing track / infrastructure. Not an experimental phase.
+**Read-first sections re-read today:** `AI_COLLABORATION_GUIDE.md` §1.1
+(repository structure), §1.2 (config snapshot and commit hash per run);
+`COMPLIANCE_GUIDE.md` §3.6 (reproducibility), C5.
+**Hardware:** local · **CU spent:** none
+
+---
+
+### What was run
+
+- **Script / notebook:** none. Repository audit.
+- **Method:** the public repository was cloned and inspected; result files were
+  checked for the `git_commit` field; the upstream `anthropics/jacobian-lens`
+  history was cloned in full to establish which commit Phase 0 used.
+- **Git commit:** `<fill in — the commit that adds third_party/PINNED_COMMIT.txt>`
+
+---
+
+### Result
+
+**1. Every Phase 0 result carries `git_commit: "UNKNOWN"`.** Checked across the
+Control A sweep (per-condition files and `clean.json`), the Qwen3-8B headroom
+summary, and the Qwen3.5-4B headroom summary. `band_stats.json` and Control A's
+`_summary.json` have no such field at all.
+
+**2. The cause is a silent failure, not a missing feature.** Three separate
+implementations — `src/ablation/sweep.py`, `scripts/run_control_a.py`,
+`scripts/headroom_check.py` — each call `git rev-parse HEAD` in the current
+working directory and fall back to a placeholder string on failure. Under Colab
+the working directory is not a git checkout, so the call failed every time and
+the placeholder was written. Nothing surfaced the failure.
+
+**3. The upstream clone was unpinned.** Phase 0 notebooks used
+`git clone -q --depth 1 https://github.com/anthropics/jacobian-lens.git`, which
+records no commit.
+
+**4. The upstream commit is nonetheless known.** As of 2026-08-05 the upstream
+repository contains exactly one commit:
+`581d398613e5602a5af361e1c34d3a92ea82ba8e`, 2026-07-02, "Initial release".
+Every Phase 0 clone necessarily obtained it. Recorded in
+`third_party/PINNED_COMMIT.txt` and marked there as a reconstruction.
+
+**5. The code was committed on 2026-08-05, after every run it produced.** The
+repository previously contained twelve files and a single commit dated
+2026-07-29. The harness, tests, scripts, and all Control A results were added
+today.
+
+**6. `COMPLIANCE_GUIDE.md` overstates the project's position on this point.**
+Line 134 describes reproducibility as "the project's strongest position," listing
+"git commit hashes written into output directories" and "pinned dependencies."
+Line 189 repeats both as a reviewer-facing differentiator. Neither held.
+
+---
+
+### Reading of the result
+
+The correspondence between the code now in the repository and the results now in
+the repository is **asserted by the author and not verifiable from git history.**
+No commit predating the runs contains the code, and the results do not name a
+commit. This is a genuine limitation of the Phase 0 record and it is stated here
+rather than papered over.
+
+What is *not* affected: the results themselves, the pre-registration, the seeded
+random draws, and the append-only log of what was decided when. The Control A
+pre-registration exists as a file dated 2026-07-28, and — more importantly — it
+contains a criterion the data failed, which is the strongest available evidence
+that it was not written to fit the outcome. Provenance of the *code* is weaker
+than the record implies; provenance of the *decisions* is intact.
+
+**Finding 6 is the one that needed catching.** A compliance document claiming a
+strength the artifacts do not support is precisely the unearned positive claim
+the project's governance exists to prevent, and it survived several reviews of
+that document because nobody checked the claim against the output files. The
+lesson generalises: assertions in the compliance ledger about what the artifacts
+contain should be verified against the artifacts, not against intent.
+
+---
+
+### The three questions
+
+1. **Which claim does today's work support?** None — infrastructure. This bears
+   on how Phase 0's provenance is described, not on H1, H2 or H3.
+2. **Did I import any property of J-space by assumption today?** No.
+3. **Would this step still be defensible if the final result is null?** Yes, and
+   more so. A null whose code provenance is unverifiable is weaker than one whose
+   is; recording the gap now is what makes the Phase 3 record stronger than the
+   Phase 0 one.
+
+---
+
+### Deviations
+
+None from a pre-registration. Three corrective actions taken or scheduled:
+
+- `third_party/PINNED_COMMIT.txt` created, recording the upstream commit and
+  labelling it a reconstruction.
+- `src/provenance.py` added: resolves the commit relative to the source file
+  rather than the working directory, and **raises rather than returning a
+  placeholder** when the commit cannot be established.
+- `COMPLIANCE_GUIDE.md` lines 134 and 189 to be corrected — see next step.
+
+---
+
+### Next step
+
+1. Replace the three `git_commit()` implementations with `src/provenance.py`.
+   Verify by running any script and confirming a real hash appears in the output.
+2. Correct `COMPLIANCE_GUIDE.md` lines 134 and 189 so the reproducibility claim
+   matches the artifacts: seeded draws, pre-registration and the append-only log
+   hold; commit hashes and pinned dependencies hold from Phase 1 onward, not for
+   Phase 0.
+3. Add one sentence to the paper's limitations covering Phase 0 code provenance.
+
+**Decisions left open:**
+
+- Whether Phase 0's provenance gap warrants any change to what Control A is
+  claimed to establish. Current view: no — the gap concerns which revision of the
+  code ran, not whether the reported numbers came from the reported procedure.
+  Recorded so the question is visible rather than assumed away.
+
