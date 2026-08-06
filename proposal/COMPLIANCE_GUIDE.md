@@ -131,7 +131,7 @@ None of these are expected to block anything. All are cheap now and expensive at
 
 **Code and data.** Authors are strongly encouraged to open-source code, models, prompts, and data, and **reviewers are explicitly asked to weigh reproducibility and code availability**. Recommended anonymisation routes: `anonymous.4open.science` for repositories, an anonymous Hugging Face account for large artifacts.
 
-**Assessment.** This is the project's strongest position. Seeded random-subspace draws, per-run config snapshots, git commit hashes written into output directories, pinned dependencies, pre-registration, and an append-only lab log exceed what the venue asks for. The only gap is *delivery*: the repo is private, and an anonymised public mirror has to be prepared, not assumed.
+**Assessment.** Seeded random-subspace draws, per-run config recorded in every result file, pre-registration, and an append-only lab log meet or exceed what the venue asks for. Two items do not hold for Phase 0: commit hashes were written as UNKNOWN because capture failed silently under Colab, and the upstream clone was unpinned. Both are corrected going into Phase 1 — see src/provenance.py and third_party/PINNED_COMMIT.txt. The remaining gap is delivery: the repository is public under an identifying account, and an anonymised mirror for review has still to be prepared (C5).
 
 **Action.** Plan the anonymised release as a task with real hours attached, not as a submission-day step. The lab log and `amendments.md` are strong evidence for a null result — decide deliberately whether they go in the anonymised release. Recommendation: yes, and say so in the paper.
 
@@ -186,7 +186,7 @@ Measured against venue requirements, not against the plan.
 
 **Where the project is ahead of what the venue asks.**
 
-- Reproducibility discipline exceeds the standard. Seeded draws, config snapshots, commit hashes, pinned dependencies, append-only log. The venue asks reviewers to weigh reproducibility; this is a differentiator, provided it is actually shipped (C5).
+- Reproducibility discipline exceeds the standard. Seeded draws, config snapshots, commit hashes, pinned dependencies, append-only log. The venue asks reviewers to weigh reproducibility; this is a differentiator, provided it is actually shipped (C5). See Assessment section above for details on commit hash and pinned dependency distinctions between phase 0 and subsequent phases. 
 - Pre-registration is not required by the venue and is uncommon at workshops. For a null result at a venue that invites nulls, it is close to decisive.
 - The verification instinct is already correct. The repo's NeurIPS workshop guide flags ten acronyms as unverified rather than filling gaps — exactly the behaviour that keeps §3.3 from becoming a problem.
 - Self-corrections are logged rather than silently edited (the Control A protocol reversal; the single-token constraint revision). This is the habit that makes an appendix credible.
