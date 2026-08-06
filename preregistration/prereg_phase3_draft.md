@@ -30,6 +30,9 @@ requirement from the first line.
 | Clean-top-k exclusion | 10, **never 0** | paper's confound guard; the only identified route to a **false-positive H1** |
 | Effective rank | reported per condition | k J-lens vectors may span fewer than k dimensions |
 | Seeds | recorded per random draw | guide §1.2; `AblationSpec` refuses an unseeded random selector |
+| Perturbation magnitude | ‖h − h′‖ and ‖h‖ recorded per layer, per ablated position, every condition | Cluster E; matched-size is not matched-magnitude |
+
+**Perturbation magnitude is recorded, not controlled:** The matched-random baselines of §3 equalise the number of directions removed, not the amount of activation removed. Because the removed component is computed in order to be zeroed, its norm is recorded at no additional cost, per layer and per ablated position, for every condition including clean. This makes the size of the intervention a reported quantity rather than an assumption. No condition is rescaled, resampled, or otherwise altered on the basis of it — see §3.
 
 **Recommender analogue of the confound guard — must be implemented explicitly:**
 do not ablate directions corresponding to items already in the top-k of the clean
@@ -82,6 +85,27 @@ way and it was corrected before any result was reported.
 **`next_k` is run alongside as a complementary baseline** at every k — the
 adjacent rank band, same lens, same size. A candidate that matters no more than
 the next-k has not earned H1.
+
+**3.1 Perturbation magnitude — reported, not gating**
+
+For every condition at every k, the following are reported alongside the ablation result:
+
+median and interquartile range of ‖h − h′‖ / ‖h‖ across ablated positions, per layer
+the same aggregated across the band
+absolute ‖h − h′‖, since ratios alone can conceal a small numerator over a small denominator
+for the two nulls, the distribution across all 19 draws, not a single summary
+
+These are reported for candidate, next_k, random_lens, random_iso and clean. clean must return zero; a non-zero value indicates the hooks fired when they should not have and invalidates the run.
+
+This measurement does not gate any claim. H1 and H2 are decided by the criteria in §7 and by nothing here. The magnitude figures are diagnostic context reported in full, and are fixed as report-only before the numbers are seen, precisely so that an inconvenient disparity cannot later be used to dismiss a result and a convenient one cannot be recruited to strengthen it.
+
+Interpretation is nonetheless pre-committed. Report-only does not mean silent. Whichever of the following the data shows, the corresponding statement appears in the results text, not only in an appendix table:
+
+Comparable magnitudes across candidate and nulls — stated as strengthening the matched-random control, since the candidate's effect cannot then be attributed to a larger perturbation.
+Candidate removes materially more norm than a null — stated as a limitation of that null, naming which one, and the H1 claim is reported against the stronger remaining null rather than against the pooled picture.
+The two nulls differ from each other — stated explicitly, with random_iso described as the weaker control if it removes less. The separate-reporting requirement of §3 already forbids pooling them; this makes the reason visible.
+
+No threshold divides these cases. Fixing a numeric cut-off before any recommender magnitudes exist would be arbitrary, and fixing one afterwards would be post-hoc. The commitment is to describe what is found in the results text, not to act on it.
 
 ## 4. Intact side — FIXED in structure
 
