@@ -351,7 +351,7 @@ Draft in progress.
 - **Method:** the public repository was cloned and inspected; result files were
   checked for the `git_commit` field; the upstream `anthropics/jacobian-lens`
   history was cloned in full to establish which commit Phase 0 used.
-- **Git commit:** `<fill in — the commit that adds third_party/PINNED_COMMIT.txt>`
+- **Git commit:** `83090c2`
 
 ---
 
