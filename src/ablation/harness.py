@@ -94,7 +94,7 @@ class AblationResult:
     spec: AblationSpec | None = None
     ids: torch.Tensor | None = None       # [1, seq_len]; needed to score against
                                           # true next tokens on a corpus (intact side)
-
+    perturbation: dict = field(default_factory=dict)   # layer -> magnitude stats
 
 def prepare_lens(lens: JacobianLens, device) -> JacobianLens:
     """Move the Jacobians onto the compute device. **Does not touch dtype.**
@@ -187,6 +187,9 @@ class _Ablator:
         self._blocks, self._bases = blocks, bases
         self._position_mask, self._mode = position_mask, mode
         self._handles: list[Any] = []
+        # Perturbation magnitude, prereg phase 3 3.1. layer -> [(removed, full), ...]
+        # Recorded, never used to alter any condition.
+        self.magnitude: dict[int, list[tuple[float, float]]] = {}
 
     def _hook(self, index: int):
         basis = self._bases[index]
@@ -199,6 +202,23 @@ class _Ablator:
             new = project_out(h, basis, mode=self._mode)
             if self._position_mask is not None:
                 new = torch.where(self._position_mask[:, None], new, h)
+
+            # --- perturbation magnitude at ablated positions only (prereg 3.1)
+            if self._position_mask is not None:
+                sel = self._position_mask
+            else:
+                sel = torch.ones(h.shape[0], dtype=torch.bool, device=h.device)
+            if bool(sel.any()):
+                removed = (h - new)[sel].float()
+                full = h[sel].float()
+                self.magnitude.setdefault(index, []).extend(
+                    zip(
+                        removed.norm(dim=-1).tolist(),
+                        full.norm(dim=-1).tolist(),
+                    )
+                )
+            # --- end perturbation magnitude
+
             tensor = torch.cat([new[None], tensor[1:]], dim=0)
             return (tensor, *output[1:]) if is_tuple else tensor
 
@@ -217,6 +237,37 @@ class _Ablator:
         for h in self._handles:
             h.remove()
         self._handles = []
+
+
+def summarise_magnitude(raw: dict[int, list[tuple[float, float]]]) -> dict:
+    """Per-layer summary of how much activation the ablation removed.
+
+    Reported, never acted on: prereg phase 3 3.1 fixes this as report-only
+    before any values are seen. Matched-size controls equalise the number of
+    directions removed, not the amount of activation removed; this makes the
+    latter a measured quantity instead of an assumption.
+    """
+    import statistics
+
+    out: dict[str, dict] = {}
+    for layer, pairs in raw.items():
+        if not pairs:
+            continue
+        removed = [r for r, _ in pairs]
+        full = [f for _, f in pairs]
+        ratios = sorted(r / f for r, f in pairs if f > 0)
+        if not ratios:
+            continue
+        n = len(ratios)
+        out[str(layer)] = {
+            "n_positions": n,
+            "removed_norm_median": statistics.median(removed),
+            "full_norm_median": statistics.median(full),
+            "ratio_median": statistics.median(ratios),
+            "ratio_q1": ratios[max(0, (n - 1) // 4)],
+            "ratio_q3": ratios[min(n - 1, (3 * (n - 1)) // 4)],
+        }
+    return out
 
 
 @torch.no_grad()
@@ -310,7 +361,7 @@ def run_ablation(
         pos_mask[list(spec.positions)] = True
 
     # --- Pass 2: ablated ---
-    with _Ablator(model.layers, bases, pos_mask, spec.mode):
+    with _Ablator(model.layers, bases, pos_mask, spec.mode) as ablator:
         with ActivationRecorder(model.layers, [final]) as rec2:
             model.forward(ids)
             ablated_final = rec2.activations[final][0].detach()
@@ -321,6 +372,7 @@ def run_ablation(
         effective_rank={l: b.rank for l, b in bases.items()},
         spec=spec,
         ids=ids,
+        perturbation=summarise_magnitude(ablator.magnitude),
     )
 
 
