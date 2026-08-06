@@ -15,6 +15,7 @@ Usage:
         --out results/raw/controlA_qwen3-8b/
 """
 from __future__ import annotations
+from provenance import git_commit
 
 import argparse, json, subprocess, time
 from collections import defaultdict
